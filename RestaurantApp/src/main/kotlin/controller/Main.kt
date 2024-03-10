@@ -8,5 +8,9 @@ fun main() {
     val rd = Reader(db)
     val ps = PrintSelect()
     val first = FirstStep(ps, rd, db)
-    first.start()
+    try {
+        first.start()
+    } catch (e: Exception) {
+        println(e)
+    }
 }
